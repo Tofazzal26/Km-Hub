@@ -5,9 +5,9 @@ import BannerStyle from "./BannerStyle/BannerStyle.module.css";
 
 const Banner: React.FC = () => {
   return (
-    <div className="md:pr-0 pr-2">
+    <div className="">
       {/* Hero Section */}
-      <div className="relative w-full md:h-[98vh] h-[850px] text-white bg-cover bg-no-repeat bg-center bg-[url('/banner.jpg')]">
+      <div className="relative w-full md:h-[98vh] h-[850px] text-white bg-cover bg-no-repeat bg-center bg-[url('/banner.jpg')] ">
         {/* Overlay */}
         <div className="absolute inset-0 bg-gray-900/70 flex items-center justify-center">
           <div className="w-full">
