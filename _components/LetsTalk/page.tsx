@@ -73,7 +73,7 @@ const LetsTalk = () => {
               className="w-full mb-6 rounded-xl bg-[#0f0f11] border border-white/10 text-gray-300 p-4 focus:outline-none focus:border-[#3b5ffd]"
             ></textarea>
 
-            <button className="w-full h-12 bg-[#3b5ffd] hover:bg-[#2f4de0] transition-all duration-300 text-white font-semibold rounded-full cursor-pointer shadow-lg shadow-[#3b5ffd]/30">
+            <button className="w-full h-14 bg-[#3b5ffd] hover:bg-[#2f4de0] transition-all duration-300 text-white font-semibold rounded-full cursor-pointer shadow-lg shadow-[#3b5ffd]/30">
               Send Message
             </button>
           </div>

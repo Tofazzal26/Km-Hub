@@ -2,7 +2,7 @@ import React from "react";
 
 const WhatWeDo = () => {
   return (
-    <div className="bg-[#0f0f11] text-white">
+    <div className="bg-[#0f0f11] text-white lg:px-0 px-2">
       <div className="container mx-auto">
         <div className="lg:py-10 py-5">
           <div>

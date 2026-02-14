@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cabin } from "next/font/google";
 import "./globals.css";
 import Header from "@/_components/Header/page";
+import Footer from "@/_components/Footer/page";
 
 const cabin = Cabin({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${cabin.className}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

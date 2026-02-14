@@ -12,7 +12,7 @@ import {
 
 const OurService = () => {
   return (
-    <div className="bg-[#0f0f11] text-white lg:py-20 py-10">
+    <div className="bg-[#0f0f11] text-white lg:py-20 py-10 lg:px-0 px-2">
       <div className="container mx-auto">
         <div>
           <div className="flex justify-between lg:flex-row flex-col lg:gap-0 gap-5">
