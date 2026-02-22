@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between">
               <div>
-                <h2 className="lg:text-5xl text-3xl font-medium lg:w-[840px] w-full leading-[40px] lg:leading-[60px]">
+                <h2 className="lg:text-5xl text-2xl font-medium lg:w-[840px] w-full leading-[40px] lg:leading-[60px]">
                   We explore the uncharted territories of the digital landscape,
                   turning challenges into opportunities.
                 </h2>

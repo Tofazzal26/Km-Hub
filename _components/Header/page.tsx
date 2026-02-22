@@ -94,12 +94,12 @@ const Header = () => {
               </Link>
 
               <Link
-                href="/api/portfolio"
+                href="/api/work"
                 className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#93bbef] ${
-                  path === "/api/portfolio" ? activeClass : normalClass
+                  path === "/api/work" ? activeClass : normalClass
                 }`}
               >
-                Portfolio
+                Work
               </Link>
 
               <Link
