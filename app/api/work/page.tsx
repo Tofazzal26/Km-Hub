@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { ComponentType } from "react";
 
 import FacebookAd from "@/_components/OurService/facebookAd";
+import FacebookCam from "@/_components/OurService/facebookCam";
 
 type Tab = {
   id: number;
@@ -20,11 +21,7 @@ const tabs: Tab[] = [
   {
     id: 2,
     title: "Facebook CAM",
-    Component: () => (
-      <p className="text-gray-300">
-        Complete Facebook Campaign Management service.
-      </p>
-    ),
+    Component: FacebookCam,
   },
   {
     id: 3,
@@ -69,12 +66,12 @@ export default function Work() {
   return (
     <div>
       <div>
-        <div className="relative w-full h-[400px] lg:h-[516px] text-white bg-cover bg-no-repeat bg-center bg-[url('/workBanner.jpg')]">
+        <div className="relative w-full h-[300px] lg:h-[516px] text-white bg-cover bg-no-repeat bg-center bg-[url('/workBanner.jpg')]">
           <div className="w-full h-full flex flex-col justify-center items-center lg:px-0 px-2">
-            <h2 className="lg:text-[100px] text-[50px] font-medium">
+            {/* <h2 className="lg:text-[100px] text-[50px] font-medium">
               Our Work
-            </h2>
-            <div className="flex lg:flex-row flex-col gap-10 lg:mt-6 mt-3">
+            </h2> */}
+            <div className="flex lg:flex-row flex-col gap-5 lg:mt-6 mt-3">
               <button className="text-sm lg:text-base font-bold lg:px-10 h-[50px] lg:h-[65px] px-8 rounded-[40px] bg-[#3b5ffd] text-white">
                 GET STARTED
               </button>
