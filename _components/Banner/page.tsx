@@ -16,7 +16,7 @@ const Banner: React.FC = () => {
                 <h2 className="lg:text-[50px] text-[35px] font-medium">
                   Measure Every Click, Improve Every Campaign
                 </h2>
-                <p className="text-lg w-[860px] mx-auto text-gray-300 mb-5">
+                <p className="text-lg lg:w-[860px] w-full mx-auto text-gray-300 mb-5">
                   We help businesses plan, run, and optimize their advertising
                   campaigns by tracking user behavior, analyzing performance,
                   and turning insights into actionable strategies that drive
@@ -33,6 +33,14 @@ const Banner: React.FC = () => {
                     alt="banner"
                   />
                 </div>
+              </div>
+              <div className="text-center space-x-4 mt-5">
+                <button className="bg-orange-500 px-8 py-3 text-xl rounded-lg font-semibold">
+                  Explore Services
+                </button>
+                <button className="border-[#364153] border-[1px] text-xl px-12 py-3 font-semibold rounded-lg">
+                  Send Email
+                </button>
               </div>
             </div>
           </div>
