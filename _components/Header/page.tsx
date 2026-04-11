@@ -8,24 +8,24 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const path = usePathname();
 
-  const activeClass = "text-[#93bbef]";
-  const normalClass = "text-white";
+  const activeClass = "text-[#ff7460]";
+  const normalClass = "text-black md:text-black text-white";
 
   return (
     <div>
-      <nav className="relative bg-[#0f0f11] shadow">
-        <div className="container lg:px-0 px-2 py-6 mx-auto md:flex md:justify-between md:items-center">
+      <nav className="relative bg-gray-200 shadow">
+        <div className="container lg:px-0 px-2 py-4 mx-auto md:flex md:justify-between md:items-center">
           {/* Logo & Mobile Button */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Image
-                width={24}
-                height={24}
-                className="w-auto h-8 sm:h-8"
+                width={40}
+                height={40}
+                className="w-auto h-12 sm:h-12"
                 src="/km.png"
                 alt="logo"
               />
-              <h2 className="text-xl uppercase font-normal text-white">
+              <h2 className="text-2xl uppercase font-normal mt-4 text-black">
                 Analytics Hub
               </h2>
             </div>
@@ -35,7 +35,7 @@ const Header = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="text-gray-200 hover:text-gray-400 focus:outline-none"
+                className="text-black hover:text-[#ff7460] focus:outline-none"
                 aria-label="toggle menu"
               >
                 {!isOpen ? (
@@ -77,7 +77,7 @@ const Header = () => {
           <div
             className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-[#1f2937]
             md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:flex md:items-center 
-            text-[14px] font-bold uppercase ${
+            text-[16px] md:text-[17px] font-bold uppercase ${
               isOpen
                 ? "translate-x-0 opacity-100"
                 : "opacity-0 -translate-x-full md:opacity-100 md:translate-x-0"
@@ -86,7 +86,7 @@ const Header = () => {
             <div className="flex flex-col md:flex-row md:mx-6">
               <Link
                 href="/"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#93bbef] ${
+                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
                   path === "/" ? activeClass : normalClass
                 }`}
               >
@@ -94,17 +94,17 @@ const Header = () => {
               </Link>
 
               <Link
-                href="/api/work"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#93bbef] ${
-                  path === "/api/work" ? activeClass : normalClass
+                href="/api/service"
+                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
+                  path === "/api/service" ? activeClass : normalClass
                 }`}
               >
-                Work
+                Service
               </Link>
 
               <Link
                 href="/api/about"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#93bbef] ${
+                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
                   path === "/api/about" ? activeClass : normalClass
                 }`}
               >
@@ -113,7 +113,7 @@ const Header = () => {
 
               <Link
                 href="/api/contact"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#93bbef] ${
+                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
                   path === "/api/contact" ? activeClass : normalClass
                 }`}
               >
