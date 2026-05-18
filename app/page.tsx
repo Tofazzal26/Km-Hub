@@ -4,6 +4,8 @@ import HomeWorkSection from "@/_components/HomeWorkSection/page";
 import LetsTalk from "@/_components/LetsTalk/page";
 import OurService from "@/_components/OurService/page";
 import PaymentSection from "@/_components/PaymentSection/page";
+import Testimonials from "@/_components/Testimonials/page";
+import TrustedSection from "@/_components/TrustedSection/page";
 import WhatWeDo from "@/_components/WhatWeDo/page";
 import WhyChooseUS from "@/_components/WhyChooseUS/page";
 
@@ -14,8 +16,10 @@ export default function Home() {
       <WhatWeDo />
       {/* <OurService /> */}
       <Brand />
+      <TrustedSection />
       <HomeWorkSection />
       <WhyChooseUS />
+      <Testimonials />
       <LetsTalk />
       <PaymentSection />
     </div>

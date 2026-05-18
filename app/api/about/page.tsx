@@ -1,24 +1,89 @@
 import Image from "next/image";
 import React from "react";
-
+import { Users, CheckCircle, Star, Clock } from "lucide-react";
 const About = () => {
+  const stats = [
+    {
+      id: 1,
+      icon: <Users size={28} />,
+      value: "54+",
+      label: "Happy Clients",
+      color: "text-blue-400",
+      bg: "bg-blue-500/10",
+    },
+    {
+      id: 2,
+      icon: <CheckCircle size={28} />,
+      value: "60+",
+      label: "Projects Done",
+      color: "text-green-400",
+      bg: "bg-green-500/10",
+    },
+    {
+      id: 3,
+      icon: <Star size={28} />,
+      value: "40+",
+      label: "5-Star Reviews",
+      color: "text-yellow-400",
+      bg: "bg-yellow-500/10",
+    },
+    {
+      id: 4,
+      icon: <Clock size={28} />,
+      value: "1+",
+      label: "Years Experience",
+      color: "text-purple-400",
+      bg: "bg-purple-500/10",
+    },
+  ];
   return (
     <div>
       <div>
-        <div className="relative w-full h-[300px] lg:h-[516px] text-white bg-cover bg-no-repeat bg-center bg-[url('/about.jpg')]">
-          <div className="w-full h-full flex flex-col justify-center items-center lg:px-0 px-2 absolute inset-0 bg-gray-900/70">
-            {/* <h2 className="lg:text-[100px] text-[50px] font-medium">About</h2> */}
-            <div className="flex lg:flex-row flex-col gap-5 lg:mt-6 mt-3">
-              <button className="text-sm lg:text-base font-bold lg:px-10 h-[50px] lg:h-[65px] px-8 rounded-[40px] bg-[#3b5ffd] text-white">
-                GET STARTED
-              </button>
-              <h2 className="lg:text-[23px] text-lg w-full lg:w-[550px]">
-                Our mission is to create visually stunning digital landscapes,
-                connecting you with your audience on a profound level.
-              </h2>
-            </div>
+        <section className="w-full bg-gradient-to-r from-[#132238] via-[#0B1220] to-[#132238] py-16 sm:py-20 px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            {/* Heading */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
+              About{" "}
+              <span className="bg-gradient-to-r from-[#27C5F3] to-[#9B5CF6] bg-clip-text text-transparent">
+                Team Advertiser
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="mt-6 max-w-3xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+              We are a passionate team of digital artisans dedicated to crafting
+              exceptional online experiences and driving measurable growth for
+              brands worldwide.
+            </p>
+          </div>
+        </section>
+        <div className="bg-gradient-to-r from-[#132238] via-[#0B1220] to-[#132238] pb-10">
+          <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((item) => (
+              <div
+                key={item.id}
+                className="group flex flex-col items-center justify-center p-6 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl"
+              >
+                <div
+                  className={`p-3 rounded-full ${item.bg} ${item.color} mb-4 transition-all duration-300 group-hover:scale-110`}
+                >
+                  {item.icon}
+                </div>
+
+                <h2
+                  className={`text-3xl font-bold ${item.color} mb-1 transition-all duration-300`}
+                >
+                  {item.value}
+                </h2>
+
+                <p className="text-sm text-gray-300 group-hover:text-white transition">
+                  {item.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
+
         <div className="bg-[#0f0f11] text-white py-10 lg:py-20">
           <div className="container mx-auto">
             <div className="flex lg:flex-row flex-col lg:gap-0 gap-5 items-center">
