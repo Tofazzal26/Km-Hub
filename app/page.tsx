@@ -16,7 +16,7 @@ export default function Home() {
       <WhatWeDo />
       {/* <OurService /> */}
       <Brand />
-      <TrustedSection />
+      {/* <TrustedSection /> */}
       <HomeWorkSection />
       <WhyChooseUS />
       <Testimonials />
