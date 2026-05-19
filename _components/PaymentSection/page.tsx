@@ -5,7 +5,7 @@ const PaymentSection = () => {
   return (
     <section className="bg-[#0B1120] border-b border-[#273141] relative overflow-hidden">
       {/* Glow Effects */}
-      <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-cyan-500/10 blur-[100px] rounded-full"></div>
+      <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-[#f59760]/10 blur-[100px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-[#f59760]/10 blur-[100px] rounded-full"></div>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -18,7 +18,7 @@ const PaymentSection = () => {
               border border-white/10
               rounded-2xl
               p-5
-              hover:border-cyan-400/40
+              hover:border-[#f59760]/40
               hover:-translate-y-1
               transition-all
               duration-300
@@ -26,8 +26,8 @@ const PaymentSection = () => {
             "
           >
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center group-hover:bg-cyan-400 transition duration-300">
-                <Shield className="w-7 h-7 text-cyan-400 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-xl bg-[#f59760]/10 flex items-center justify-center group-hover:bg-[#f59760] transition duration-300">
+                <Shield className="w-7 h-7 text-[#f59760] group-hover:text-white" />
               </div>
 
               <div>
@@ -46,7 +46,7 @@ const PaymentSection = () => {
                 VISA
               </span>
 
-              <span className="bg-red-500 text-white text-[11px] px-3 py-1 rounded-md font-semibold">
+              <span className="bg-[#f59760] text-white text-[11px] px-3 py-1 rounded-md font-semibold">
                 MC
               </span>
 
@@ -64,7 +64,7 @@ const PaymentSection = () => {
               border border-white/10
               rounded-2xl
               p-5
-              hover:border-cyan-400/40
+              hover:border-[#f59760]/40
               hover:-translate-y-1
               transition-all
               duration-300
@@ -72,8 +72,8 @@ const PaymentSection = () => {
             "
           >
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center group-hover:bg-cyan-400 transition duration-300">
-                <CheckCircle className="w-7 h-7 text-cyan-400 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-xl bg-[#f59760]/10 flex items-center justify-center group-hover:bg-[#f59760] transition duration-300">
+                <CheckCircle className="w-7 h-7 text-[#f59760] group-hover:text-white" />
               </div>
 
               <div>
@@ -86,7 +86,7 @@ const PaymentSection = () => {
               </div>
             </div>
 
-            <div className="w-full h-[2px] bg-gradient-to-r from-cyan-400/40 to-transparent mt-6"></div>
+            <div className="w-full h-[2px] bg-gradient-to-r from-[#f59760]/40 to-transparent mt-6"></div>
           </div>
 
           {/* Support */}
@@ -97,7 +97,7 @@ const PaymentSection = () => {
               border border-white/10
               rounded-2xl
               p-5
-              hover:border-cyan-400/40
+              hover:border-[#f59760]/40
               hover:-translate-y-1
               transition-all
               duration-300
@@ -105,8 +105,8 @@ const PaymentSection = () => {
             "
           >
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center group-hover:bg-cyan-400 transition duration-300">
-                <Headphones className="w-7 h-7 text-cyan-400 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-xl bg-[#f59760]/10 flex items-center justify-center group-hover:bg-[#f59760] transition duration-300">
+                <Headphones className="w-7 h-7 text-[#f59760] group-hover:text-white" />
               </div>
 
               <div>
@@ -119,7 +119,7 @@ const PaymentSection = () => {
               </div>
             </div>
 
-            <div className="w-full h-[2px] bg-gradient-to-r from-cyan-400/40 to-transparent mt-6"></div>
+            <div className="w-full h-[2px] bg-gradient-to-r from-[#f59760]/40 to-transparent mt-6"></div>
           </div>
 
           {/* Live Chat */}
@@ -130,7 +130,7 @@ const PaymentSection = () => {
               border border-white/10
               rounded-2xl
               p-5
-              hover:border-cyan-400/40
+              hover:border-[#f59760]/40
               hover:-translate-y-1
               transition-all
               duration-300
@@ -138,8 +138,8 @@ const PaymentSection = () => {
             "
           >
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center group-hover:bg-cyan-400 transition duration-300">
-                <MessageCircle className="w-7 h-7 text-cyan-400 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-xl bg-[#f59760]/10 flex items-center justify-center group-hover:bg-[#f59760] transition duration-300">
+                <MessageCircle className="w-7 h-7 text-[#f59760] group-hover:text-white" />
               </div>
 
               <div>
@@ -150,7 +150,7 @@ const PaymentSection = () => {
               </div>
             </div>
 
-            <div className="w-full h-[2px] bg-gradient-to-r from-cyan-400/40 to-transparent mt-6"></div>
+            <div className="w-full h-[2px] bg-gradient-to-r from-[#f59760]/40 to-transparent mt-6"></div>
           </div>
         </div>
       </div>

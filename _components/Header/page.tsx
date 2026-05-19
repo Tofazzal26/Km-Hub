@@ -1,129 +1,191 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const path = usePathname();
 
-  const activeClass = "text-[#ff7460]";
-  const normalClass = "text-black md:text-black text-white";
+  const navItems = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Service",
+      path: "/api/service",
+    },
+    {
+      name: "About",
+      path: "/api/about",
+    },
+    {
+      name: "Contact",
+      path: "/api/contact",
+    },
+  ];
 
   return (
-    <div>
-      <nav className="relative bg-gray-200 shadow">
-        <div className="container lg:px-0 px-2 py-4 mx-auto md:flex md:justify-between md:items-center">
-          {/* Logo & Mobile Button */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
+    <header
+      className="
+        sticky top-0 z-50
+        bg-[#0B1120]/90
+        backdrop-blur-xl
+        border-b border-white/10
+      "
+    >
+      {/* Glow */}
+      <div className="absolute top-0 left-0 w-[250px] h-[250px] bg-[#f59760]/10 blur-[120px] rounded-full"></div>
+
+      <div className="container mx-auto px-4 relative">
+        <nav className="flex items-center justify-between h-[80px]">
+          {/* LOGO */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div
+              className="
+                p-2 rounded-xl
+                bg-white/5
+                border border-white/10
+                group-hover:border-[#f59760]/40
+                transition-all duration-300
+              "
+            >
               <Image
                 width={40}
                 height={40}
-                className="w-auto h-12 sm:h-12"
+                className="w-auto h-10 sm:h-11"
                 src="/km.png"
                 alt="logo"
               />
-              <h2 className="text-2xl uppercase font-normal mt-4 text-black">
+            </div>
+
+            <div>
+              <h2
+                className="
+                  text-white
+                  text-lg sm:text-2xl
+                  uppercase
+                  font-bold
+                  tracking-wide
+                "
+              >
                 Analytics Hub
               </h2>
-            </div>
 
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-                className="text-black hover:text-[#ff7460] focus:outline-none"
-                aria-label="toggle menu"
-              >
-                {!isOpen ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 8h16M4 16h16"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                )}
-              </button>
+              <p className="text-xs text-gray-400 hidden sm:block">
+                Digital Growth Agency
+              </p>
             </div>
+          </Link>
+
+          {/* DESKTOP MENU */}
+          <div className="hidden lg:flex items-center gap-2">
+            {navItems.map((item, index) => {
+              const isActive = path === item.path;
+
+              return (
+                <Link
+                  key={index}
+                  href={item.path}
+                  className={`
+                    relative
+                    px-5 py-2.5
+                    rounded-full
+                    text-sm font-semibold
+                    uppercase tracking-wide
+                    transition-all duration-300
+                    ${
+                      isActive
+                        ? "bg-[#f59760] text-white shadow-lg shadow-[#f59760]/30"
+                        : "text-gray-300 hover:text-white hover:bg-white/5"
+                    }
+                  `}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* Menu Items */}
-          <div
-            className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-[#1f2937]
-            md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:flex md:items-center 
-            text-[16px] md:text-[17px] font-bold uppercase ${
-              isOpen
-                ? "translate-x-0 opacity-100"
-                : "opacity-0 -translate-x-full md:opacity-100 md:translate-x-0"
-            }`}
+          {/* MOBILE BUTTON */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="
+              lg:hidden
+              w-11 h-11
+              rounded-xl
+              bg-white/5
+              border border-white/10
+              flex items-center justify-center
+              text-white
+              hover:border-[#f59760]/40
+              transition-all duration-300
+            "
           >
-            <div className="flex flex-col md:flex-row md:mx-6">
-              <Link
-                href="/"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
-                  path === "/" ? activeClass : normalClass
-                }`}
-              >
-                Home
-              </Link>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
 
-              <Link
-                href="/api/service"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
-                  path === "/api/service" ? activeClass : normalClass
-                }`}
-              >
-                Service
-              </Link>
+        {/* MOBILE MENU */}
+        <div
+          className={`
+            lg:hidden
+            absolute left-0 top-[90px]
+            w-full px-4
+            transition-all duration-300 ease-in-out
+            ${
+              isOpen
+                ? "opacity-100 visible translate-y-0"
+                : "opacity-0 invisible -translate-y-5"
+            }
+          `}
+        >
+          <div
+            className="
+              bg-[#111827]/95
+              backdrop-blur-2xl
+              border border-white/10
+              rounded-3xl
+              p-5
+              shadow-2xl
+            "
+          >
+            <div className="flex flex-col gap-3">
+              {navItems.map((item, index) => {
+                const isActive = path === item.path;
 
-              <Link
-                href="/api/about"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
-                  path === "/api/about" ? activeClass : normalClass
-                }`}
-              >
-                About
-              </Link>
-
-              <Link
-                href="/api/contact"
-                className={`my-2 md:mx-4 md:my-0 transition-colors duration-300 hover:text-[#ff7460] ${
-                  path === "/api/contact" ? activeClass : normalClass
-                }`}
-              >
-                Contact
-              </Link>
+                return (
+                  <Link
+                    key={index}
+                    href={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`
+                      px-5 py-4
+                      rounded-2xl
+                      text-sm font-semibold
+                      uppercase tracking-wide
+                      transition-all duration-300
+                      ${
+                        isActive
+                          ? "bg-[#f59760] text-white"
+                          : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
+                      }
+                    `}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 };
 

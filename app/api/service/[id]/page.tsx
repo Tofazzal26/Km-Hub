@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { CheckCircle, TrendingUp } from "lucide-react";
 import { useParams } from "next/navigation";
 import { serviceData } from "@/data/service";
@@ -46,8 +46,6 @@ const ServiceDetails = () => {
 
   const id = Array.isArray(params?.id) ? params.id[0] : params?.id;
 
-  /* ✅ NO STATE for loading or service */
-
   const service = useMemo<Service | null>(() => {
     if (!id) return null;
 
@@ -60,7 +58,7 @@ const ServiceDetails = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-white">
+      <div className="min-h-screen flex items-center justify-center bg-[#0B1120] text-white">
         Loading...
       </div>
     );
@@ -70,56 +68,109 @@ const ServiceDetails = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-white">
+      <div className="min-h-screen flex items-center justify-center bg-[#0B1120] text-white">
         Service not found
       </div>
     );
   }
 
   return (
-    <div className="bg-[#0f0f11] text-white">
-      <div className="container mx-auto">
+    <div className="relative overflow-hidden bg-[#0B1120] text-white">
+      {/* Glow Effects */}
+      <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#f59760]/10 blur-[120px] rounded-full"></div>
+
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* HERO */}
-        <div className="py-16 text-center">
-          <button className="bg-[#173143] text-[#00d3f3] border-[#134559] border-[1px] rounded-full font-semibold px-6 py-2 text-sm">
+        <div className="py-14 lg:py-20 text-center">
+          <button
+            className="
+              bg-[#f59760]/10
+              text-[#f59760]
+              border border-[#f59760]/20
+              rounded-full
+              font-semibold
+              px-6 py-2
+              text-sm
+              hover:bg-[#f59760]
+              hover:text-white
+              transition-all duration-300
+            "
+          >
             {service.heroPlaceholder?.label || "PREMIUM SERVICE"}
           </button>
 
-          <h2 className="text-4xl font-semibold mt-4">{service.head}</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-5 leading-tight max-w-4xl mx-auto">
+            {service.head}
+          </h2>
         </div>
 
-        <div className="grid grid-cols-4 pb-20 gap-10">
+        {/* MAIN GRID */}
+        <div className="grid lg:grid-cols-2 grid-cols-1 pb-14 lg:pb-20 gap-8 lg:gap-10">
           {/* LEFT */}
-          <div className="col-span-2">
-            <Image
-              src={service.image}
-              width={650}
-              height={390}
-              alt={service.head}
-              className="rounded-xl w-[650px] h-[390px]"
-            />
+          <div>
+            {/* IMAGE */}
+            <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+              <Image
+                src={service.image}
+                width={650}
+                height={390}
+                alt={service.head}
+                className="
+                  rounded-3xl
+                  w-full
+                  h-[250px]
+                  sm:h-[350px]
+                  lg:h-[390px]
+                  object-cover
+                  transition duration-500
+                  group-hover:scale-105
+                "
+              />
+            </div>
 
-            <div className="border-[#283444] border-[1px] rounded-xl p-5 w-[650px] mt-14">
+            {/* ABOUT */}
+            <div
+              className="
+                border border-white/10
+                bg-white/5
+                backdrop-blur-xl
+                rounded-3xl
+                p-5 lg:p-7
+                mt-8 lg:mt-10
+              "
+            >
               <h2 className="text-2xl font-semibold flex items-center gap-3">
-                <TrendingUp color="#07a7c3" />
+                <TrendingUp className="text-[#f59760]" />
+
                 {service.about?.title}
               </h2>
 
-              {service.about?.description?.map((text, idx) => (
-                <p key={idx} className="font-semibold text-gray-300 mt-5">
-                  {text}
-                </p>
-              ))}
+              <div className="space-y-5 mt-6">
+                {service.about?.description?.map((text, idx) => (
+                  <p
+                    key={idx}
+                    className="text-gray-300 leading-[30px] text-sm lg:text-base"
+                  >
+                    {text}
+                  </p>
+                ))}
+              </div>
 
-              <h2 className="text-lg my-5 font-semibold">
+              <h2 className="text-lg my-6 font-semibold text-white leading-[35px]">
                 {service.descriptionOne}
               </h2>
 
-              <ol>
+              <ol className="space-y-3">
                 {service.skills?.map((skill, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <span className="text-3xl">•</span>
-                    {skill}
+                  <li
+                    key={idx}
+                    className="flex items-center gap-3 text-gray-300"
+                  >
+                    <span className="text-[#f59760] text-xl">•</span>
+
+                    <span>{skill}</span>
                   </li>
                 ))}
               </ol>
@@ -127,23 +178,44 @@ const ServiceDetails = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="col-span-2">
-            <div className="border-[#283444] border-[1px] rounded-xl p-5">
-              <h4 className="text-lg font-semibold">
+          <div>
+            {/* INCLUDES */}
+            <div
+              className="
+                border border-white/10
+                bg-white/5
+                backdrop-blur-xl
+                rounded-3xl
+                p-5 lg:p-7
+              "
+            >
+              <h4 className="text-2xl font-semibold">
                 {service.includes?.title}
               </h4>
 
-              <div className="my-5 space-y-3">
+              <div className="my-6 space-y-4">
                 {service.includes?.items?.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 bg-[#222d3d] p-4 rounded-lg"
+                    className="
+                      flex items-start gap-4
+                      bg-[#111827]
+                      border border-white/10
+                      p-4
+                      rounded-2xl
+                      hover:border-[#f59760]/30
+                      hover:bg-white/5
+                      transition-all duration-300
+                    "
                   >
-                    <span className="text-xl">{item.icon}</span>
+                    <span className="text-2xl">{item.icon}</span>
 
                     <div>
-                      <h2 className="font-semibold">{item.name}</h2>
-                      <p className="text-sm text-gray-300">{item.desc}</p>
+                      <h2 className="font-semibold text-lg">{item.name}</h2>
+
+                      <p className="text-sm text-gray-400 mt-1 leading-[25px]">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -151,20 +223,41 @@ const ServiceDetails = () => {
             </div>
 
             {/* WHY US */}
-            <div className="border-[#283444] border-[1px] rounded-xl p-5 mt-6">
-              <h4 className="text-lg font-semibold">{service.whyUs?.title}</h4>
+            <div
+              className="
+                border border-white/10
+                bg-white/5
+                backdrop-blur-xl
+                rounded-3xl
+                p-5 lg:p-7
+                mt-6
+              "
+            >
+              <h4 className="text-2xl font-semibold">{service.whyUs?.title}</h4>
 
-              <div className="my-5 space-y-3">
+              <div className="my-6 space-y-4">
                 {service.whyUs?.items?.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 bg-[#222d3d] p-4 rounded-lg"
+                    className="
+                      flex items-start gap-4
+                      bg-[#111827]
+                      border border-white/10
+                      p-4
+                      rounded-2xl
+                      hover:border-[#f59760]/30
+                      hover:bg-white/5
+                      transition-all duration-300
+                    "
                   >
-                    <CheckCircle color="#05df72" />
+                    <CheckCircle className="text-green-400 mt-1" />
 
                     <div>
-                      <h2 className="font-semibold">{item.name}</h2>
-                      <p className="text-sm text-gray-300">{item.desc}</p>
+                      <h2 className="font-semibold text-lg">{item.name}</h2>
+
+                      <p className="text-sm text-gray-400 mt-1 leading-[25px]">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}

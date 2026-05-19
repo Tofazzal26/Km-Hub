@@ -54,18 +54,22 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className=" bg-[#0f0f11] py-20">
-      <div className="text-white text-center ">
-        {/* <h4 className="text-lg">Testimonials</h4> */}
+    <div className="relative overflow-hidden bg-[#0B1120] py-20">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#f59760]/10 blur-[180px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[160px] rounded-full"></div>
+
+      {/* Heading */}
+      <div className="text-white text-center relative z-10">
         <h2 className="uppercase text-2xl">What Our Clients Say</h2>
+
         <p className="text-gray-400 mt-5 mb-10">
           Real feedback from real clients who trust us with their business
           growth.
         </p>
       </div>
-      {/* ⭐ background glow */}
-      <div className="absolute w-full h-[600px] bg-cyan-500/10 blur-[150px] rounded-full top-[-100px] left-1/2 -translate-x-1/2"></div>
 
+      {/* Swiper */}
       <Swiper
         effect={"coverflow"}
         centeredSlides={true}
@@ -82,51 +86,51 @@ const Testimonials = () => {
         }}
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="w-full max-w-6xl"
+        className="w-full max-w-6xl relative z-10"
       >
         {data.map((item, i) => (
           <SwiperSlide
             key={i}
             className="!w-[320px] md:!w-[420px] transition-all duration-300"
           >
-            <div className="relative p-[1px] rounded-2xl bg-gradient-to-b from-cyan-400/40 to-transparent">
-              {/* glass card */}
+            <div className="relative p-[1px] rounded-2xl bg-gradient-to-b from-[#f59760]/40 to-transparent">
+              {/* Glass Card */}
               <div className="bg-[#0b1625]/80 backdrop-blur-xl rounded-2xl p-6 h-full border border-white/10">
-                {/* header */}
+                {/* Header */}
                 <div className="flex justify-between mb-4">
                   <div className="flex items-center gap-4">
-                    <div>
-                      <Image
-                        src={"/client3.webp"}
-                        width={40}
-                        height={40}
-                        alt="profile"
-                        className="rounded-full"
-                      />
-                    </div>
+                    <Image
+                      src={"/client3.webp"}
+                      width={40}
+                      height={40}
+                      alt="profile"
+                      className="rounded-full"
+                    />
+
                     <div>
                       <h3 className="text-white font-semibold">{item.name}</h3>
-                      <p className="text-xs text-gray-400">{item?.country}</p>
+                      <p className="text-xs text-gray-400">{item.country}</p>
                     </div>
                   </div>
+
                   <span className="text-xs text-gray-500">Jan 9, 2026</span>
                 </div>
 
-                {/* stars */}
+                {/* Stars */}
                 <div className="text-yellow-400 mb-4 text-sm">★★★★★</div>
 
-                {/* text */}
+                {/* Text */}
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
                   {item.text}
                 </p>
 
-                {/* response */}
+                {/* Response */}
                 <div className="bg-[#0a1422] border border-white/10 rounded-xl p-4">
-                  <p className="text-cyan-400 text-sm mb-1">
+                  <p className="text-[#f59760] text-sm mb-1">
                     ↳ Seller’s Response
                   </p>
                   <p className="text-xs text-gray-400">
-                    {"Thanks a lot! I'm glad you're happy."}
+                    {" Thanks a lot! I'm glad you're happy."}
                   </p>
                 </div>
               </div>
@@ -142,7 +146,7 @@ const Testimonials = () => {
           opacity: 1;
         }
         .swiper-pagination-bullet-active {
-          background: #22d3ee;
+          background: #f59760;
           width: 20px;
           border-radius: 10px;
         }
