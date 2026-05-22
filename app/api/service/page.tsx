@@ -42,7 +42,7 @@ const Service = () => {
 
         {/* Cards */}
         <div className="py-14 lg:py-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {serviceData.slice(0, 4).map((item) => (
+          {serviceData.map((item) => (
             <div
               key={item.id}
               className="

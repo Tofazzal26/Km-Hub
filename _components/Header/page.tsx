@@ -59,7 +59,7 @@ const Header = () => {
                 width={40}
                 height={40}
                 className="w-auto h-10 sm:h-11"
-                src="/km.png"
+                src="/NewLogo.png"
                 alt="logo"
               />
             </div>

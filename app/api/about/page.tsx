@@ -7,7 +7,7 @@ const About = () => {
     {
       id: 1,
       icon: <Users size={28} />,
-      value: "54+",
+      value: "15+",
       label: "Happy Clients",
       color: "text-[#f59760]",
       bg: "bg-[#f59760]/10",
@@ -15,7 +15,7 @@ const About = () => {
     {
       id: 2,
       icon: <CheckCircle size={28} />,
-      value: "60+",
+      value: "20+",
       label: "Projects Done",
       color: "text-cyan-400",
       bg: "bg-cyan-500/10",
@@ -23,7 +23,7 @@ const About = () => {
     {
       id: 3,
       icon: <Star size={28} />,
-      value: "40+",
+      value: "10+",
       label: "5-Star Reviews",
       color: "text-yellow-400",
       bg: "bg-yellow-500/10",
@@ -51,16 +51,16 @@ const About = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
             About{" "}
             <span className="bg-gradient-to-r from-[#f59760] to-cyan-400 bg-clip-text text-transparent">
-              Team Advertiser
+              US
             </span>
           </h2>
 
           {/* Description */}
-          <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
+          {/* <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
             We are a passionate team of digital artisans dedicated to crafting
             exceptional online experiences and driving measurable growth for
             brands worldwide.
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -107,76 +107,77 @@ const About = () => {
       {/* STORY SECTION */}
       <div className="text-white py-10 lg:py-20 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="flex lg:flex-row flex-col-reverse items-center gap-10 lg:gap-16">
+          <div className="">
             {/* LEFT */}
             <div className="w-full">
               <h2 className="text-[#f59760] text-sm font-semibold uppercase tracking-[3px]">
                 Our Story
               </h2>
-
-              <h2 className="lg:text-5xl text-3xl font-bold lg:mt-5 mt-3 w-full lg:w-[850px] lg:leading-[65px] leading-[42px]">
-                Our integrated strategies and innovative solutions propel your
-                brand towards excellence in the digital realm.
+              <h2 className="lg:text-4xl text-xl font-bold lg:mt-5 mt-3 lg:leading-[65px] leading-[42px]">
+                Helping Businesses Grow with Smart Digital Marketing
               </h2>
-
-              <div className="space-y-5 mt-8 lg:mt-12">
-                <p className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full lg:w-[680px]">
-                  Quam viverra orci sagittis eu. Sapien nec sagittis aliquam
-                  malesuada bibendum arcu vitae elementum. Elementum eu
-                  facilisis sed odio morbi quis commodo odio.
+              <div className="space-y-5 mt-4">
+                <p className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full ">
+                  At KM Analytics Hub, we help businesses worldwide grow their
+                  online presence through result-driven digital marketing
+                  strategies, advanced analytics, and modern web solutions.
                 </p>
 
-                <p className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full lg:w-[680px]">
-                  Pellentesque massa placerat duis ultricies. Blandit cursus
-                  risus at ultrices mi tempus imperdiet. Ipsum dolor sit amet
-                  consectetur adipiscing elit pellentesque habitant.
+                <p className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full">
+                  We are a team of experienced digital marketing experts who
+                  specialize in creating high-performing campaigns, improving
+                  conversion tracking, and helping brands make data-driven
+                  business decisions. Our goal is to deliver measurable growth,
+                  stronger online visibility, and better customer engagement for
+                  every client we work with. We believe that successful
+                  marketing is not only about running ads — it is about
+                  understanding data, user behavior, and building strategies
+                  that generate real business results.
                 </p>
               </div>
-
-              {/* Button */}
-              <button
-                className="
-                  mt-8
-                  bg-[#f59760]
-                  hover:bg-[#ff7f32]
-                  text-white
-                  px-8 py-3
-                  rounded-xl
-                  font-semibold
-                  transition-all duration-300
-                  hover:scale-105
-                  shadow-lg hover:shadow-orange-500/30
-                "
-              >
-                Learn More
-              </button>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="w-full flex justify-center">
-              <div className="relative group">
-                {/* Glow */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-[#f59760]/20 to-cyan-500/20 blur-2xl rounded-[30px] opacity-70 group-hover:opacity-100 transition duration-500"></div>
-
-                <Image
-                  width={410}
-                  height={550}
-                  className="
-                    relative
-                    lg:w-[410px]
-                    lg:h-[550px]
-                    w-full
-                    max-w-[400px]
-                    h-[420px]
-                    object-cover
-                    rounded-[24px]
-                    border border-white/10
-                    transition duration-500
-                    group-hover:scale-[1.02]
-                  "
-                  src="/bannerMiddle.webp"
-                  alt="banner"
-                />
+              <div>
+                <h2 className="text-4xl font-bold mt-6">What We Do</h2>
+                <div>
+                  <h2 className="font-bold text-lg mt-4 text-gray-400">
+                    We provide a wide range of digital marketing and analytics
+                    services, including:
+                  </h2>
+                  <ul className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full pl-[18px] list-disc mt-5">
+                    <li>Google Ads Management</li>
+                    <li>Facebook Ads Management</li>
+                    <li>Conversion Tracking Setup</li>
+                    <li>Web Analytics Setup</li>
+                    <li>Shopify Website Design</li>
+                    <li>Facebook Page Management</li>
+                  </ul>
+                  <p className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full mt-4">
+                    Using tools like Google Analytics 4, Meta Pixel, Facebook
+                    CAPI, Hotjar, and Microsoft Clarity, we help businesses
+                    track performance accurately and optimize their marketing
+                    efforts effectively.
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-4xl font-bold mt-6">
+                    Why Choose KM Analytics Hub
+                  </h2>
+                  <ul className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full pl-[18px] list-disc mt-5">
+                    <li>Expert digital marketing team</li>
+                    <li>Data-driven marketing strategies</li>
+                    <li>Worldwide client support</li>
+                    <li>Focus on measurable business growth</li>
+                    <li>Modern tracking and analytics solutions</li>
+                    <li>Professional communication and support</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="text-4xl font-bold mt-6">Our Mission</h2>
+                  <p className="font-normal text-gray-400 text-base lg:text-lg leading-[30px] w-full mt-4">
+                    Our mission is to help businesses grow faster with powerful
+                    digital marketing, accurate analytics, and smart online
+                    strategies that create long-term success.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

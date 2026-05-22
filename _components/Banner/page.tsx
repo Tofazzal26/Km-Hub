@@ -59,7 +59,7 @@ const Banner: React.FC = () => {
               {/* Stats */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-8 mt-12">
                 <div>
-                  <h3 className="text-3xl font-bold text-white">120+</h3>
+                  <h3 className="text-3xl font-bold text-white">20+</h3>
                   <p className="text-gray-400">Successful Projects</p>
                 </div>
 

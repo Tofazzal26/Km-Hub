@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useMemo } from "react";
-import { CheckCircle, TrendingUp } from "lucide-react";
+import { ArrowUpRight, CheckCircle, TrendingUp } from "lucide-react";
 import { useParams } from "next/navigation";
 import { serviceData } from "@/data/service";
 
@@ -262,6 +262,15 @@ const ServiceDetails = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="mt-5">
+              <a
+                href="mailto:kmanalyticshub@gmail.com"
+                className="inline-flex items-center justify-center gap-3 w-full h-14 rounded-xl bg-[#f59760] hover:bg-[#ff7f32] text-white font-semibold text-lg transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-orange-500/30"
+              >
+                Discuss Price
+                <ArrowUpRight size={22} />
+              </a>
             </div>
           </div>
         </div>

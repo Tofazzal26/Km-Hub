@@ -7,7 +7,7 @@ const Brand = () => {
     {
       id: 1,
       icon: <Users size={28} />,
-      value: "54+",
+      value: "15+",
       label: "Happy Clients",
       color: "text-blue-400",
       bg: "bg-blue-500/10",
@@ -15,7 +15,7 @@ const Brand = () => {
     {
       id: 2,
       icon: <CheckCircle size={28} />,
-      value: "60+",
+      value: "20+",
       label: "Projects Done",
       color: "text-green-400",
       bg: "bg-green-500/10",
@@ -23,7 +23,7 @@ const Brand = () => {
     {
       id: 3,
       icon: <Star size={28} />,
-      value: "40+",
+      value: "10+",
       label: "5-Star Reviews",
       color: "text-yellow-400",
       bg: "bg-yellow-500/10",

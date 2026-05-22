@@ -303,4 +303,75 @@ export const serviceData = [
     },
     cta: "Ready to scale your business with powerful Facebook ads? 🚀",
   },
+  {
+    id: 6,
+    slug: "Social Media",
+    head: "Be your expert social media manager to grow your brand",
+    image: "/ss6.png",
+    heroPlaceholder: {
+      icon: "📣",
+      label: "PREMIUM SERVICE",
+      sub: "High-Converting Campaigns",
+    },
+    descriptionOne: "What Our Service Includes:",
+    skills: [
+      "🎯 Strategic Planning: Tailored content strategies that align with your brand goals.",
+      "🎨 Content Creation: Eye-catching visuals, engaging captions, and researched hashtags.",
+      "🗓️ Scheduling & Publishing: Consistent posting at optimal times for maximum reach.",
+      "💬 Community Management: Active engagement with your audience to build loyalty.",
+      "📊 Performance Reports: Monthly insights to track growth and ROI.",
+      "🛠️ Full Optimization: Professional setup of Facebook, Instagram, LinkedIn, X, and TikTok accounts.",
+    ],
+    deliveryDays: 3,
+    revisions: "Unlimited",
+    about: {
+      title: "About This Service",
+      description: [
+        "Your social media shouldn't just exist; it should perform. We specialize in managing and optimizing your digital presence to attract real followers, boost engagement, and turn attention into business results.",
+        "From crafting a custom strategy to daily management, our team handles every aspect of your social media so you can focus on running your business.",
+      ],
+    },
+    includes: {
+      title: "What Our Service Includes",
+      items: [
+        {
+          icon: "🎯",
+          name: "Strategic Campaign Planning",
+          desc: "Custom ad strategies based on your goals.",
+        },
+        {
+          icon: "🎯",
+          name: "Audience Targeting",
+          desc: "Advanced targeting for quality customers.",
+        },
+      ],
+    },
+    whyUs: {
+      title:
+        "1-Month Social Media Management ( We’ll manage your social media accounts for one month with basic content updates and engagement to keep your pages active and consistent.)",
+      items: [
+        {
+          name: "Account review and basic optimization",
+          desc: "",
+        },
+        {
+          name: "12–15 posts per month (images & captions)",
+          desc: "",
+        },
+        {
+          name: "Hashtag and caption setup",
+          desc: "",
+        },
+        {
+          name: "Weekly activity updates",
+          desc: "",
+        },
+        {
+          name: "Basic audience engagement",
+          desc: "",
+        },
+      ],
+    },
+    cta: "Ready to scale your business with powerful Facebook ads? 🚀",
+  },
 ];
