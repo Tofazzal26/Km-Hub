@@ -38,7 +38,7 @@ const Banner: React.FC = () => {
 
               {/* Buttons */}
               <div className="flex sm:flex-row flex-col items-center lg:items-start gap-5 mt-8">
-                <Link href="/services">
+                <Link href="/api/service">
                   <button className="group bg-[#f59760] hover:bg-[#ff7f32] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-orange-500/30">
                     <span className="flex items-center gap-2">
                       Explore Services
@@ -48,12 +48,11 @@ const Banner: React.FC = () => {
                     </span>
                   </button>
                 </Link>
-
-                <Link href="/contact">
+                <a href="mailto:kmanalyticshub@gmail.com">
                   <button className="border border-[#364153] bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                     Send Email
                   </button>
-                </Link>
+                </a>
               </div>
 
               {/* Stats */}

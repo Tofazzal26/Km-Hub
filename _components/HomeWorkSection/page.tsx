@@ -1,3 +1,4 @@
+"use client";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -46,19 +47,21 @@ const HomeWorkSection = () => {
           {/* Cards */}
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
             {serviceData.slice(0, 3).map((item) => (
-              <div
+              <Link
                 key={item.id}
+                href={`/api/service/${item.id}`}
                 className="
-                  group
-                  border border-white/10
-                  rounded-[24px]
-                  overflow-hidden
-                  bg-white/5
-                  backdrop-blur-xl
-                  hover:border-[#f59760]/30
-                  hover:-translate-y-2
-                  transition-all duration-500
-                "
+        group
+        border border-white/10
+        rounded-[24px]
+        overflow-hidden
+        bg-white/5
+        backdrop-blur-xl
+        hover:border-[#f59760]/30
+        hover:-translate-y-2
+        transition-all duration-500
+        block
+      "
               >
                 {/* Image */}
                 <div className="overflow-hidden">
@@ -68,13 +71,13 @@ const HomeWorkSection = () => {
                     height={250}
                     alt={item.head}
                     className="
-                      w-full
-                      h-[220px]
-                      sm:h-[240px]
-                      object-cover
-                      transition duration-500
-                      group-hover:scale-110
-                    "
+            w-full
+            h-[220px]
+            sm:h-[240px]
+            object-cover
+            transition duration-500
+            group-hover:scale-110
+          "
                   />
                 </div>
 
@@ -100,55 +103,55 @@ const HomeWorkSection = () => {
                   <div className="flex justify-between items-center">
                     <button
                       className="
-                        text-white
-                        hover:text-[#f59760]
-                        transition duration-300
-                        font-medium
-                      "
+              text-white
+              hover:text-[#f59760]
+              transition duration-300
+              font-medium
+            "
                     >
                       Discuss
                     </button>
 
-                    <Link
-                      href={`/api/service/${item.id}`}
+                    <div
                       className="
-                        flex items-center gap-2
-                        text-[#f59760]
-                        font-medium
-                        hover:gap-3
-                        transition-all duration-300
-                      "
+              flex items-center gap-2
+              text-[#f59760]
+              font-medium
+              hover:gap-3
+              transition-all duration-300
+            "
                     >
                       Details <ArrowRight size={18} />
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           {/* Button */}
           <div className="mt-12 flex justify-center items-center">
-            <button
+            <Link
+              href="/api/service"
               className="
-                group
-                bg-[#f59760]
-                hover:bg-[#ff8c42]
-                flex items-center gap-2
-                px-8 sm:px-10
-                py-3
-                text-base sm:text-lg
-                font-semibold
-                text-white
-                rounded-xl
-                transition-all duration-300
-                hover:scale-105
-                shadow-lg shadow-[#f59760]/20
-              "
+      group
+      bg-[#f59760]
+      hover:bg-[#ff8c42]
+      flex items-center gap-2
+      px-8 sm:px-10
+      py-3
+      text-base sm:text-lg
+      font-semibold
+      text-white
+      rounded-xl
+      transition-all duration-300
+      hover:scale-105
+      shadow-lg shadow-[#f59760]/20
+    "
             >
               View All Services
               <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

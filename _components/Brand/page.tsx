@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Users, CheckCircle, Star, Clock } from "lucide-react";
 
 const Brand = () => {

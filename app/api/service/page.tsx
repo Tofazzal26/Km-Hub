@@ -43,20 +43,22 @@ const Service = () => {
         {/* Cards */}
         <div className="py-14 lg:py-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceData.map((item) => (
-            <div
+            <Link
               key={item.id}
+              href={`/api/service/${item.id}`}
               className="
-                group
-                border border-white/10
-                bg-white/5
-                backdrop-blur-xl
-                rounded-[24px]
-                overflow-hidden
-                hover:scale-[1.03]
-                hover:border-[#f59760]/40
-                transition-all duration-300
-                shadow-lg hover:shadow-orange-500/10
-              "
+        group
+        border border-white/10
+        bg-white/5
+        backdrop-blur-xl
+        rounded-[24px]
+        overflow-hidden
+        hover:scale-[1.03]
+        hover:border-[#f59760]/40
+        transition-all duration-300
+        shadow-lg hover:shadow-orange-500/10
+        block
+      "
             >
               {/* Image */}
               <div className="overflow-hidden">
@@ -66,12 +68,12 @@ const Service = () => {
                   height={192}
                   alt="service"
                   className="
-                    w-full
-                    h-[220px]
-                    object-cover
-                    transition duration-500
-                    group-hover:scale-110
-                  "
+            w-full
+            h-[220px]
+            object-cover
+            transition duration-500
+            group-hover:scale-110
+          "
                 />
               </div>
 
@@ -97,34 +99,33 @@ const Service = () => {
                 <div className="flex justify-between items-center mt-5">
                   <button
                     className="
-                      text-[#f59760]
-                      text-sm lg:text-base
-                      hover:text-white
-                      transition duration-300
-                    "
+              text-[#f59760]
+              text-sm lg:text-base
+              hover:text-white
+              transition duration-300
+            "
                   >
                     Discuss
                   </button>
 
-                  <Link
-                    href={`/api/service/${item.id}`}
+                  <div
                     className="
-                      flex items-center gap-2
-                      text-cyan-400
-                      hover:text-[#f59760]
-                      transition duration-300
-                      group/link
-                    "
+              flex items-center gap-2
+              text-cyan-400
+              hover:text-[#f59760]
+              transition duration-300
+              group/link
+            "
                   >
                     Details
                     <ArrowRight
                       size={18}
                       className="transition duration-300 group-hover/link:translate-x-1"
                     />
-                  </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { Shield, CheckCircle, Headphones, MessageCircle } from "lucide-react";
 
 const PaymentSection = () => {

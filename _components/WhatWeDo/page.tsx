@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { ArrowUpRight } from "lucide-react";
 
 const data = [
@@ -6,21 +6,29 @@ const data = [
     id: 1,
     title: "Paid Advertising & Campaigns",
     image: "/do1.jpg",
+    description:
+      "We run high-converting paid campaigns across Google, Facebook, Instagram, and other platforms to increase reach, generate quality leads, and maximize ROI.",
   },
   {
     id: 2,
     title: "Conversion & Tracking Solutions",
     image: "/do2.webp",
+    description:
+      "We implement advanced conversion tracking, pixel setup, and funnel optimization to measure user behavior accurately and improve overall campaign performance.",
   },
   {
     id: 3,
     title: "Analytics & User Insights",
     image: "/do3.jpg",
+    description:
+      "We analyze customer behavior, engagement patterns, and performance metrics to uncover valuable insights that help businesses make smarter marketing decisions.",
   },
   {
     id: 4,
     title: "Data-Driven Decision Making",
     image: "/do4.webp",
+    description:
+      "Using real-time analytics and business intelligence, we help brands make strategic decisions backed by accurate data, trends, and measurable results.",
   },
 ];
 
@@ -111,9 +119,8 @@ const WhatWeDo = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 text-sm mt-4 opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-500">
-                  Powerful strategies and smart analytics designed to improve
-                  marketing performance and drive measurable business growth.
+                <p className="text-gray-300 text-sm mt-4 opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-500 leading-[26px]">
+                  {item.description}
                 </p>
 
                 {/* Line */}

@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { Star, BadgeCheck, Headphones, Clock } from "lucide-react";
 
 const WhyChooseUS = () => {

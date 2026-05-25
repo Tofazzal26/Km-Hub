@@ -1,3 +1,4 @@
+"use client";
 import {
   Facebook,
   Instagram,
@@ -43,7 +44,7 @@ const Footer = () => {
             </div>
 
             {/* Button */}
-            <Link href="/contact">
+            <Link href="/api/contact">
               <button
                 className="
                   group
