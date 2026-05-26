@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Banner from "@/_components/Banner/page";
 import Brand from "@/_components/Brand/page";
 import HomeWorkSection from "@/_components/HomeWorkSection/page";
