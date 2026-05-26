@@ -96,15 +96,7 @@ const Testimonials = () => {
               <div className="bg-[#0b1625]/80 backdrop-blur-xl rounded-2xl p-6 h-full border border-white/10">
                 {/* Header */}
                 <div className="flex justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <Image
-                      src={"/client3.webp"}
-                      width={40}
-                      height={40}
-                      alt="profile"
-                      className="rounded-full"
-                    />
-
+                  <div className="">
                     <div>
                       <h3 className="text-white font-semibold">{item.name}</h3>
                       <p className="text-xs text-gray-400">{item.country}</p>

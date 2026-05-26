@@ -4,6 +4,10 @@ export const serviceData = [
     slug: "analytics-tracking",
     head: "Analytics & Behavior Tracking for Smarter Business Decisions",
     image: "/s1.png",
+
+    rating: "5.0",
+    reviews: "18 Reviews",
+
     heroPlaceholder: {
       icon: "📊",
       label: "Analytics & Tracking",
@@ -70,6 +74,10 @@ export const serviceData = [
     slug: "shopify-store",
     head: "Custom Shopify Store Development Designed to Increase Sales",
     image: "/s2.png",
+
+    rating: "4.9",
+    reviews: "14 Reviews",
+
     heroPlaceholder: {
       icon: "🛍️",
       label: "Shopify Store",
@@ -131,6 +139,10 @@ export const serviceData = [
     slug: "google-ads",
     head: "Google Ads Campaigns Built for Traffic, Leads & Sales",
     image: "/s3.png",
+
+    rating: "5.0",
+    reviews: "20 Reviews",
+
     heroPlaceholder: {
       icon: "🎯",
       label: "Google Ads",
@@ -191,6 +203,10 @@ export const serviceData = [
     slug: "gtm-tracking",
     head: "Advanced GTM Event & Conversion Tracking Setup",
     image: "/s4.jpeg",
+
+    rating: "4.8",
+    reviews: "12 Reviews",
+
     heroPlaceholder: {
       icon: "⚙️",
       label: "GTM & Conversion Tracking",
@@ -250,6 +266,10 @@ export const serviceData = [
     slug: "facebook-ads",
     head: "Performance-Focused Facebook Ads Optimized for Maximum ROI & Growth",
     image: "/s5.png",
+
+    rating: "5.0",
+    reviews: "19 Reviews",
+
     heroPlaceholder: {
       icon: "📣",
       label: "Facebook Ads",
@@ -303,11 +323,16 @@ export const serviceData = [
     },
     cta: "Ready to scale your business with powerful Facebook ads? 🚀",
   },
+
   {
     id: 6,
     slug: "Social Media",
     head: "Be your expert social media manager to grow your brand",
     image: "/ss6.png",
+
+    rating: "4.9",
+    reviews: "16 Reviews",
+
     heroPlaceholder: {
       icon: "📣",
       label: "PREMIUM SERVICE",

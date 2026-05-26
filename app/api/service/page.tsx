@@ -87,9 +87,9 @@ const Service = () => {
                 <div className="flex items-center gap-1 mt-3">
                   <span className="text-yellow-400">⭐</span>
 
-                  <span className="text-white font-medium">5.0</span>
+                  <span className="text-white font-medium">{item?.rating}</span>
 
-                  <span className="text-sm text-gray-400">(15 Reviews)</span>
+                  <span className="text-sm text-gray-400">{item?.reviews}</span>
                 </div>
 
                 {/* Divider */}

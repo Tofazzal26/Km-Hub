@@ -91,9 +91,11 @@ const HomeWorkSection = () => {
                   <div className="flex items-center gap-2 mt-3 text-sm text-gray-300">
                     <span className="text-yellow-400">⭐</span>
 
-                    <span className="text-white font-medium">5.0</span>
+                    <span className="text-white font-medium">
+                      {item?.rating}
+                    </span>
 
-                    <span>(15 Reviews)</span>
+                    <span>{item?.reviews}</span>
                   </div>
 
                   {/* Divider */}
