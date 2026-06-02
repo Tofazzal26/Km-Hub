@@ -138,7 +138,7 @@ export const serviceData = [
     id: 3,
     slug: "google-ads",
     head: "Google Ads Campaigns Built for Traffic, Leads & Sales",
-    image: "/s3.png",
+    image: "/s4.jpeg",
 
     rating: "5.0",
     reviews: "20 Reviews",
@@ -202,7 +202,7 @@ export const serviceData = [
     id: 4,
     slug: "gtm-tracking",
     head: "Advanced GTM Event & Conversion Tracking Setup",
-    image: "/s4.jpeg",
+    image: "/s3.png",
 
     rating: "4.8",
     reviews: "12 Reviews",
